@@ -1,0 +1,38 @@
+.under {
+    font-size: 20px;
+    color: blue;
+    font: bold;
+}
+
+#lang {
+    font-size: 16px;
+}
+
+.under:hover {
+    text-decoration: underline;
+}
+
+input[type=text] {
+    width: 300px;
+    height: 35px;
+    border: 2px solid black;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: rgba(129, 127, 127, 0.726);
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 10px;
+    transition: width 0.1s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 80%;
+}
+
+.giticon {
+    height: 40px;
+    width: 40px;
+    margin-bottom: -15px;
+    margin-right: 10px;
+    margin-left: 20px;
+}

@@ -6,83 +6,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Async | await</title>
+    <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./css/materialize.css">
     <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./js/materialize.js"></script>
     <script src="./js/script.js"></script>
 </head>
 
 <body>
     <div class="row">
-        <nav></nav>
-        <div class="container">
-            <div class="col s12 m12 l12">
+        <nav class="black">
+            <div class="col s12 m12 l12 offset-s4">
                 <div class="container  red">
 
-
                 </div>
             </div>
-            <div class="col s12 m12 l12">
-                <input id="get" type="text" onkeyup="getUser()">
+            <div class="col s12 m12 l5">
+                <img src="./img/github.png" class="giticon" alt="" srcset="">
+                <input class="white-text" id="get" placeholder="Search here..." type="text" onkeyup="getUser()">
                 <p id="put"></p>
             </div>
-        </div>
+        </nav>
     </div>
     </div>
-    <div class="divider"></div>
+    </div>
+    <!-- <div class="divider"></div> -->
     <div class="row">
-        <div class="container">
-            <!-- ==== -->
-            <div class="col s12 m12 l4">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="./img/images.png" class="activator" id="avtar">
-                        <span class="card-title" id="userName"></span>
-                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i
-                                class="material-icons">keyboard_arrow_right</i></a>
-                    </div>
-                    <div class="card-content">
-                        <p id="bio" style="font-family: 'Roboto', sans-serif;font-size: 20px;"></p> <br>
+        <!-- <div class="container"> -->
+        <!-- ==== -->
+        <div class="col s12 m12 l3">
+            <div class="card hoverable" style="border-radius: 5px;">
+                <div class="card-image">
+                    <img src="./img/pro.png" class="activator" id="avtar">
+                    <span class="card-title" id="userName"></span>
+                    <a class="btn-floating halfway-fab waves-effect waves-light light-green darken-4" id="prolink"
+                        target="_blank" href="https://www.github.com"><i
+                            class="material-icons">keyboard_arrow_right</i></a>
+                </div>
+                <div class="card-content">
+                    <p id="bio" style="font-family: 'Roboto', sans-serif;font-size: 20px;"></p> <br>
 
-                        <p id="loc" style="font-family: 'Roboto', sans-serif;font-size: 17px;"></p><br>
-                        <p id="mail" style="font-family: 'Roboto', sans-serif;font-size: 17px;"></p>
-                    </div>
+                    <p id="loc" style="font-family: 'Roboto', sans-serif;font-size: 17px;"></p><br>
+                    <p id="mail" style="font-family: 'Roboto', sans-serif;font-size: 17px;"></p>
                 </div>
             </div>
-            <div class="col s12 m12 l8">
-                <div class="row">
-                    <!-- <div class="cols 12">
-                        <div style="padding: 5px;margin-left: 5px;">
-                            <span class="flow-text">About :</span>
-                        </div>
-                    </div> -->
-                    <div class="col s12">
-                        <ul class="tabs">
-                            <li class="tab col s3 m4 l4 grey lighten-3"><a class="active" href="#test1">Overview</a>
-                            </li>
-                            <li class="tab col s3 m4 l4 grey lighten-3"><a href="#test2">Repositories</a></li>
-                            <li class="tab col s3 m4 l4 grey lighten-3"><a href="#test3">Followers</a></li>
+        </div>
+        <div class="col s12 m12 l6">
+            <div class="row">
+
+                <div class="col s12">
+                    <ul class="tabs">
+                        <li class="tab col s3 m4 l4 white "><a class="active white grey-text text-darken-3"
+                                href="#test1">Overview </a>
+                        </li>
+                        <li class="tab col s3 m4 l4 white"><a class=" white white grey-text text-darken-3"
+                                href="#test2">Repositories <div class="chip" id="totrepos">0</div></a>
+                        </li>
+                        <li class="tab col s3 m4 l4 white "><a class="white grey-text text-darken-3"
+                                href="#test3">Followers <div class="chip" id="totfolrs">0</div></a></li>
+
+                    </ul>
+                </div>
+                <div id="test1" class="col s12">
+                    <div class="row">
+
+                        <ul id="repos">
+                            <img class="materialboxed" width="650" src="./img/git.gif">
 
                         </ul>
-                    </div>
-                    <div id="test1" class="col s12">
-                        <div id="repos" class="row">
-                            <ul>
 
-                            </ul>
-
-                        </div>
                     </div>
                 </div>
-                <div id="test2" class="col s12">Test 2</div>
-                <div id="test3" class="col s12">Test 3</div>
+            </div>
+            <div id="test2" class="col s12">
+                <div id="repos2" class="row">
+                    <img class="materialboxed" width="650" src="./img/git.gif">
+
+                </div>
+            </div>
+            <div id="test3" class="col s12">
+                <ul id="follow-pane" class="collection">
+                    <img class="materialboxed" width="650" src="./img/git.gif">
+                </ul>
             </div>
         </div>
+        <!-- </div> -->
     </div>
-    </div>
+
 
 </body>
 
