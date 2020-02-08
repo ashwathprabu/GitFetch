@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
 .under {
     font-size: 20px;
     color: blue;
@@ -27,6 +28,11 @@ input[type=text] {
 
 input[type=text]:focus {
     width: 80%;
+}
+
+.foot {
+    font-size: 25px;
+    font-family: 'Dancing Script', cursive;
 }
 
 .giticon {
